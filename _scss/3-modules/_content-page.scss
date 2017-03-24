@@ -1,0 +1,62 @@
+.cover {
+  height: 100vh;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  h1 {
+    @include raleway;
+    @include transition;
+    font-size: 160px;
+    line-height: 160px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 50%;
+    margin: 0;
+    margin-top: -80px;
+    animation-name: appear, fadein;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.72, 0.13, 0.58, 1);
+    small {
+      @include chivo;
+      position: absolute;
+      text-align: center;
+      font-size: 16px;
+      color: #FFFFFF;
+      right: 0;
+      left: 0;
+      top: 50%;
+      margin-top: -160px;
+    }
+  }
+  .go-down {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+
+
+// Mobile Responsive
+
+
+.cover {
+  @include breakpoint(mobile){
+    h1 {
+      font-size: 70px;
+      line-height: 70px;
+      margin-top: -35px;
+      small {
+        font-size: 14px;
+        margin-top: -74px;
+      }
+    }
+  }
+}

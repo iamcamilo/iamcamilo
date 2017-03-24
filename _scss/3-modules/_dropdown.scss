@@ -1,0 +1,68 @@
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+  .dropdown {
+    display: none;
+    animation: fadein, appear-reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    animation-delay: 0.1;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 12px 16px;
+    min-width: 120px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.43);
+    border-radius: 3px;
+    margin-top: 5px;
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      background-color: white;
+      height: 12px;
+      width: 12px;
+      top: -6px;
+      transform: rotate(45deg);
+      right: 30px;
+    }
+    li a {
+      @include chivo;
+      @include transition;
+      color: $base-black;
+      font-size: 0.9em;
+      text-decoration: none;
+      opacity: 0.6;
+      display: block;
+    }
+    li {
+      line-height: 2.2em;
+      position: relative;
+      &:hover a {
+        opacity: 1;
+      }
+    }
+    li.active a {
+      opacity: 1;
+      &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        background-color: $base-black;
+        height: 8px;
+        width: 8px;
+        right: 6px;
+        top: 50%;
+        margin-top: -4px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+
+.dropdown.is-open {
+  display: inline-block;
+}

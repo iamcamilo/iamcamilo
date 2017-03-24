@@ -1,0 +1,31 @@
+# # title: iamcamilo - Camilo Munoz
+# url: "https://iamcamilo.me"
+# baseurl:
+# google_analytics_key:
+# # google_maps_javascript_api_key:
+# # disqus_shortname:
+#
+# # Default description in social shares for the jekyll-seo-tag gem
+# description: Camilo Munoz is a UI & UX Designer. He can do Web, App and Brand Design.
+#
+# # Author details for the jekyll-seo-tag gem
+# author: iamcamilo
+#   # name: Camilo Munoz Donoso
+#   email: hello@iamcamilo.me
+#   twitter: # twitter username without the @ symbol
+
+# SCSS Setup
+sass:
+  sass_dir: _scss
+  style: :compressed
+
+# Collections
+collections:
+  services:
+  about:
+  portfolio:
+
+# Gems
+
+gems:
+-  jekyll-autoprefixer

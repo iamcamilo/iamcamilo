@@ -1,0 +1,118 @@
+.modal {
+  @include transition;
+  display: none;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &.is-open {
+    display: block;
+    animation-name: fadein;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+.modal-header {
+  position: absolute;
+  padding: 35px 30px;
+}
+
+.contact.modal-contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.modal-menu {
+  padding-left: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-menu ul {
+  list-style: none;
+  padding: 0;
+  a {
+    @include raleway;
+    @include transition;
+    font-size: 30px;
+    color: rgba($base-black, 0.7);
+    text-decoration: none;
+    padding: 10px 20px;
+    &:hover {
+      color: rgba($base-black, 1);
+    }
+  }
+  li {
+    margin-bottom: 40px;
+    &.active a {
+      color: white;
+      background-color: $blue;
+      border-radius: 100px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:first-child.active a {
+      background-color: $green;
+    }
+    &:last-child.active a {
+      background-color: $pink;
+    }
+  }
+}
+
+.modal .row {
+  justify-content: center;
+  align-items: center;
+}
+
+body.is-open {
+  overflow: hidden;
+}
+
+// Mobile
+
+.modal {
+  @include breakpoint(tablet) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .modal-contact {
+      height: 30vh;
+    }
+    .modal-header {
+      padding: 14px;
+    }
+    .modal-menu {
+      height: 70vh;
+      padding: 0;
+      text-align: center;
+      ul a {
+        font-size: 44px;
+      }
+    }
+    .modal-header .logo path,
+    .modal-header .logo-text path {
+      fill: $base-black;
+    }
+  };
+  @include breakpoint(mobile) {
+    .modal-menu {
+      justify-content: flex-end;
+      ul a {
+        font-size: 30px;
+      }
+    }
+  }
+}

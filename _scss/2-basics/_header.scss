@@ -1,0 +1,206 @@
+.header {
+  @include transition;
+  background: rgba(white, 0);
+  position: absolute;
+  padding: 35px 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+}
+
+.header-options {
+  float: right;
+  .btn-language {
+    @include transition;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.header .btn-logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header .logo {
+  line-height: 40px;
+}
+
+.header .logo-text {
+  line-height: 40px;
+  position: relative;
+  bottom: 12px;
+  margin-left: 10px;
+}
+
+.header-options .btn-language {
+  @include chivo;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-right: 24px;
+  position: relative;
+  span {
+    position: absolute;
+    right: -8px;
+    line-height: 40px;
+    top: 50%;
+    margin-top: -24px;
+  }
+}
+
+.btn-menu,
+.btn-menu:before,
+.btn-menu:after,
+.btn-menu span {
+  @include transition;
+  display: inline-block;
+  width: 30px;
+}
+
+.btn-menu:before,
+.btn-menu:after,
+.btn-menu span {
+  display: inline-block;
+  content: "";
+  background: white;
+  width: 30px;
+  height: 6px;
+  position: absolute;
+  opacity: 0.7;
+  border-radius: 30px;
+}
+
+.btn-menu {
+  position: relative;
+  top: 8px;
+  height: 28px;
+  padding: 4px;
+  z-index: 100;
+  span {
+    top: 50%;
+    margin-top: -2px;
+  }
+  &:before {
+    top: 6px;
+  }
+  &:after {
+    bottom: 4px;
+  }
+  &:hover {
+    &:before,
+    &:after,
+    span {
+      opacity: 1;
+    }
+  }
+  &.is-open {
+    &:before,
+    &:after {
+      opacity: 1;
+      background: $base-black
+    }
+    &:before {
+      transform: rotate(45deg);
+      top: 16px;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      top: 16px;
+    }
+    span {
+      opacity: 0;
+    }
+  }
+}
+
+.btn-logo {
+  .logo-text {
+    transition: all 0.4s cubic-bezier(0.72, 0.13, 0.58, 1);
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  &:hover .logo-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+// Responsive
+
+.header {
+  @include breakpoint(tablet) {
+    padding: 14px;
+    .logo-text {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  };
+  @include breakpoint(mobile) {
+    a.btn-logo {
+      top: 6px;
+      position: relative;
+    }
+    &.header-home {
+      .btn-menu:before,
+      .btn-menu:after,
+      .btn-menu span {
+        background: $base-black;
+      }
+    }
+    .btn-menu,
+    .btn-logo,
+    .btn-language {
+      transform: scale(0.8);
+    }
+    .btn-logo {
+      transform-origin: top left;
+    }
+    .btn-language,
+    .btn-menu {
+      transform-origin: top right;
+    }
+    &.header-home .logo-text,
+    .modal-header .logo-text {
+      display: none;
+    }
+  }
+}
+
+
+// Header Fixed
+
+.header.header-fixed {
+  position: fixed;
+  background: white;
+  padding: 4px 14px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.43);
+  .logo path,
+  .logo-text path {
+    fill: $base-black;
+  }
+  .btn-logo {
+    top: 4px;
+    position: relative;
+  }
+  .btn-menu:before,
+  .btn-menu:after,
+  .btn-menu span  {
+    background: $base-black;
+  }
+  .btn-menu {
+    span {
+      background: $base-black;
+    }
+  }
+  .btn-language {
+    color: $base-black;
+    span polygon {
+      fill: $base-black;
+    }
+  }
+}

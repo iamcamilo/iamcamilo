@@ -1,0 +1,25 @@
+---
+layout: default
+title: Services
+---
+<div class="services">
+  <div class="container">
+    <div class="cover">
+      <h1 class="fadeout"><small>This is what I can do for you</small>Services</h1>
+      {% include go-down.html %}
+    </div>
+
+    <div class="card-container">
+      {% for services_item in site.services %}
+      <div class="card row">
+        <div class="card-image col-1"></div>
+        <div class="card-content col-1">
+          <h4>{{ services_item.title }}</h4>
+          {{ services_item.content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

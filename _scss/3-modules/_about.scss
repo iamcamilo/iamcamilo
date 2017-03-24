@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  ul {
+    @include chivo;
+    padding-left: 20px;
+    opacity: 0.72;
+    font-size: 14px;
+    color: $base-black;
+    line-height: 27px;
+    .subtitle {
+      margin-left: -20px;
+      list-style: none;
+      min-height: 27px;
+    }
+  }
+}
+
+.subtitle {
+  @include chivo;
+  color: $base-black;
+  line-height: 27px;
+  font-size: 14px;
+  opacity: 0.72;
+  font-weight: 900;
+}
+
+.clients {
+  text-align: center;
+  margin-top: 10px;
+}

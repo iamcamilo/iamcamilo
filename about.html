@@ -1,0 +1,25 @@
+---
+layout: default
+title: About
+---
+<div class="about">
+  <div class="container">
+    <div class="cover">
+      <h1 class="fadeout"><small>Learn a little more about me</small>About</h1>
+      {% include go-down.html %}
+    </div>
+
+    <div class="card-container">
+      {% for about_item in site.about %}
+      <div class="card row">
+        <div class="card-image col-1"></div>
+        <div class="card-content col-1">
+          <h4>{{ about_item.title }}</h4>
+          {{ about_item.content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

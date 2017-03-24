@@ -1,0 +1,33 @@
+---
+# Main Style
+---
+
+// // This is the single file output by sass. It is intended to ONLY @import other files.
+
+// 1 - TOOLS
+@import '1-tools/colors';
+@import '1-tools/mixins';
+@import '1-tools/fonts';
+@import '1-tools/animations';
+@import '1-tools/grid';
+
+
+// 2 - BASICS
+@import '2-basics/basic';
+@import '2-basics/text';
+@import '2-basics/container';
+@import '2-basics/home';
+@import '2-basics/header';
+
+
+// 3 - MODULES
+@import '3-modules/home-sections';
+@import '3-modules/footer';
+@import '3-modules/content-page';
+@import '3-modules/card';
+@import '3-modules/contact';
+@import '3-modules/about';
+@import '3-modules/portfolio-piece';
+@import '3-modules/dropdown';
+@import '3-modules/modal';
+@import '3-modules/not-found';

@@ -1,0 +1,57 @@
+// Home Sections
+
+.iamcamilo {
+  align-self: center;
+  flex-direction: column;
+  h1, h2 {
+    @include baloo;
+    margin: 0;
+  }
+  h1 {
+    color: $base-black;
+    font-size: 2.3em;
+    line-height: 1em;
+    margin-bottom: 10px;
+  }
+  h2 {
+    opacity: 0.4;
+    font-size: 1.95em;
+    color: rgba(0,0,0,0.84);
+    line-height: 1em;
+  }
+}
+
+.work {
+  background: $green;
+}
+
+.services {
+  background-color: $blue;
+}
+
+.about {
+  background-color: $pink;
+}
+
+.work,
+.services,
+.about {
+  padding-bottom: 60px;
+}
+
+.col.work,
+.col.about,
+.col.services {
+  cursor: pointer;
+}
+
+.work h5 {
+  @include raleway;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  @include breakpoint(mobile) {
+    font-size: 30px;
+    margin: 60px 0 30px;
+  }
+}

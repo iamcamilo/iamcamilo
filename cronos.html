@@ -1,0 +1,83 @@
+---
+layout: default
+title: Cronos
+---
+
+<div class="work">
+  <div class="container">
+
+    <div class="card-container portfolio-piece">
+      <div class="card">
+        <div class="card-cover" style="background: url(images/portfolio/cronos/cro-cover.jpg) no-repeat center; background-size: cover;"></div>
+        <div class="card-content">
+
+          <section class="title">
+            <h4>Cronos</h4>
+            <div class="skills">
+              <span class="skill">brand identity</span>
+              <span class="skill">ui & ux design</span>
+            </div>
+          </section>
+
+          <section class="description">
+            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+          </section>
+
+          <section class="double row quote">
+            <div class="double-text">
+              <p>Brand Design</p>
+            </div>
+          </section>
+
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-proc-1.jpg" alt="Cronos Brand Process 1"></div>
+          </section>
+
+          <section class="double gallery reverse row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-proc-2.jpg" alt="Cronos Brand Process 2"></div>
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-proc-3.jpg" alt="Cronos Brand Process 3"></div>
+          </section>
+
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-proc-4.jpg" alt="Cronos Brand Process 4"></div>
+          </section>
+
+          <section class="double row quote">
+            <div class="double-text">
+              <p>Web App</p>
+            </div>
+          </section>
+
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-mockup.jpg" alt="Cronos App Mockup"></div>
+          </section>
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-desktop-1.jpg" alt="Cronos App in Desktop 1"></div>
+          </section>
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/cronos/cro-desktop-2.jpg" alt="Cronos App in Desktop 2"></div>
+          </section>
+
+          <section class="card-footer">
+            <img src="images/portfolio/cronos/cro-footer.jpg" alt="Cronos">
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <h5>You may also like</h5>
+
+    <div class="row card-container card-animation small">
+      {% for portfolio_item in site.portfolio limit:2 %}
+        <div class="card col-1">
+          <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
+          <div class="card-content">
+            <h4>{{ portfolio_item.title }}</h4>
+            {{ portfolio_item.content }}
+            <a href="{{ portfolio_item.link }}" class="btn">Watch Case Study</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+---
+layout: default
+title: Work
+---
+<div class="work">
+  <div class="container container-portfolio">
+    <div class="cover">
+      <h1 class="fadeout"><small>Take a look into my selected</small>Work</h1>
+    </div>
+
+    <div class="card-container card-over">
+      {% for portfolio_item in site.portfolio %}
+      <div class="card row">
+        <div class="card-image col-1" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
+        <div class="card-content col-1">
+          <h4>{{ portfolio_item.title }}</h4>
+          {{ portfolio_item.content }}
+          <a href="{{ portfolio_item.link }}" class="btn card-animation">Watch Case Study</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

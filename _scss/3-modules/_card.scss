@@ -1,0 +1,203 @@
+.card {
+  @include transition;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.43);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  min-height: 540px;
+  transform: scale(1);
+  overflow: hidden;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  h4 {
+    @include baloo;
+    font-size: 44px;
+    color: $base-black;
+    margin: 0;
+  }
+  .skills {
+    margin-bottom: 20px;
+  }
+  .skill {
+    display: inline-block;
+    @include chivo;
+    opacity: 0.4;
+    font-size: 12px;
+    color: $base-black;
+    border: 1px solid $base-black;
+    padding: 6px 10px;
+    border-radius: 50px;
+  }
+  p {
+    @include chivo;
+    opacity: 0.72;
+    font-size: 14px;
+    color: $base-black;
+    line-height: 27px;
+    a {
+      color: $pink;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .btn {
+    @include chivo;
+    @include transition;
+    color: $green;
+    font-size: 16px;
+    background-color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    border: 1px solid $green;
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+
+.card-container .card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.card-container.card-over {
+  margin-top: -48vh;
+  @include breakpoint(mobile) {
+    margin-top: -40vh;
+  }
+}
+
+.card-content,
+.card-image {
+  padding: 50px;
+}
+
+.card-cover {
+  height: 360px;
+}
+
+.card-image,
+.card-cover {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba($base-black, 0.8) url(../images/bg.png);
+    background-attachment: fixed;
+    z-index: -1;
+  }
+}
+
+.card-content {
+  align-self: center;
+}
+
+.card:hover .btn {
+  background-color: $green;
+  color: white;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 18px 0 rgba(0,0,0,0.43);
+  }
+}
+
+.card-container.small {
+  margin-bottom: 60px;
+  @include breakpoint(mobile) {
+    margin-bottom: 0;
+  }
+  .card {
+    display: block;
+    margin: 0 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    @include breakpoint(tablet) {
+      margin: 0 8px;
+    }
+  }
+  .card-image {
+    height: 260px;
+    padding: 0;
+  }
+}
+
+
+.card .clients {
+  width: 100%;
+}
+
+
+// Mobile
+
+.card-container.row {
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.card,
+.card-container.small .card {
+  @include breakpoint(tablet) {
+    .card-content,
+    .card-image {
+      padding: 40px 30px;
+    }
+    .card-content {
+      h4 {
+        line-height: 1em;
+        margin-bottom: 10px;
+      }
+      .skill {
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    min-height: auto;
+    .card-image {
+      height: 25vh;
+      padding: 0;
+    }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 24px;
+      h4 {
+        font-size: 34px;
+        line-height: 34px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .skills {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .skill {
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .list {
+        width: 100%;
+      }
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
