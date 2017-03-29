@@ -1,7 +1,8 @@
 ---
 title: Skills
+image-cover: images/about/skills.svg
 ---
-<p>These are some of the Skills and Process that I’m using on my current projects:</p>
+These are some of the **skills and processes** that I’m using on my current projects:
 <div class="list">
   <ul class="col-1">
     <li class="subtitle">Design</li>
@@ -16,6 +17,9 @@ title: Skills
     <li class="subtitle">Development</li>
     <li>HTML5</li>
     <li>CSS3</li>
+    <li>Sass</li>
     <li>Javascript</li>
+    <li>Bootstrap</li>
+    <li>Foundation</li>
   </ul>
 </div>

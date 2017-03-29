@@ -20,7 +20,9 @@ title: Cronos
           </section>
 
           <section class="description">
-            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+            <p>Cronos is an app that improves the <strong>time management</strong> in the process of the apple selection.</p>
+            <p>I had the opportunity of designing both the <strong>brand identity</strong> and the <strong>responsive web app</strong> for this project.</p>
+            <p>In my responibilities, I had to create user flows, mockups and prototypes for the <strong>communication</strong> with the development team and <strong>testing ideas</strong> with the client.</p>
           </section>
 
           <section class="double row quote">
@@ -69,7 +71,7 @@ title: Cronos
 
     <div class="row card-container card-animation small">
       {% for portfolio_item in site.portfolio limit:2 %}
-        <div class="card col-1">
+        <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
           <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
           <div class="card-content">
             <h4>{{ portfolio_item.title }}</h4>

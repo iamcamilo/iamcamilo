@@ -12,7 +12,7 @@ title: Services
     <div class="card-container">
       {% for services_item in site.services %}
       <div class="card row">
-        <div class="card-image col-1"></div>
+        <div class="card-image col-1" style="background: url({{ services_item.image-cover }}) no-repeat center; background-size: cover;"></div>
         <div class="card-content col-1">
           <h4>{{ services_item.title }}</h4>
           {{ services_item.content }}

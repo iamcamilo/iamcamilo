@@ -21,12 +21,14 @@ title: Universitame
           </section>
 
           <section class="description">
-            <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+            <p>Universítame was an online community where relationships are created among <strong>pre-university students and students who are immersed in college</strong>. They could share accurate information, generating a personalized counseling.</p>
+            <p>I was part of the founder team when this startup was selected as part of the 11th generation of <strong>StartupChile.</strong></p>
+            <p>I had the responsibility of designing the brand, Landing page and the <strong>UI & UX</strong> of the app for desktop and mobile. Also, I had the luck of working on the <strong>Front-end</strong> side of the app too, translating all the components and views into HTML, CSS and Js.</p>
           </section>
 
           <section class="double row quote">
             <div class="double-text">
-              <p>Branding</p>
+              <p>Brand Design</p>
             </div>
           </section>
 
@@ -76,8 +78,8 @@ title: Universitame
     <h5>You may also like</h5>
 
     <div class="row card-container card-animation small">
-      {% for portfolio_item in site.portfolio limit:2 %}
-        <div class="card col-1">
+      {% for portfolio_item in site.portfolio limit:2 offset:1 %}
+        <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
           <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
           <div class="card-content">
             <h4>{{ portfolio_item.title }}</h4>

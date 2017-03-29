@@ -12,7 +12,7 @@ title: About
     <div class="card-container">
       {% for about_item in site.about %}
       <div class="card row">
-        <div class="card-image col-1"></div>
+        <div class="card-image col-1" style="background: url({{ about_item.image-cover }}) no-repeat center; background-size: cover;"></div>
         <div class="card-content col-1">
           <h4>{{ about_item.title }}</h4>
           {{ about_item.content }}

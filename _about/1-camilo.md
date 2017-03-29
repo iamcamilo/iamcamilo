@@ -1,6 +1,9 @@
 ---
 title: Who is Camilo
+image-cover: images/about/about.svg
 ---
-<p>Nice to meet you! <br><br> My name is <strong>Camilo Muñoz</strong>, I'm a Designer and Front-end Developer who since I discovered the digital world, I immediately fell in love of all the strength that intangible products can have.
-<br><br> I’ve been designing and building websites and apps for <strong>over 6 years</strong>, always making decisions based on users’s needs.
-<br><br> I’m a bit nerdy, so when I’m not designing or writting code, I may be watching the last chapter of Game of Thrones, or reading a Batman comic.</p>
+My name is **Camilo Muñoz**, I'm a Chilean Designer and Front-end Developer who since I discovered the digital world, I immediately fell in love with all the strength that intangible products can have.
+
+I’ve been designing/building **websites, apps and brands for over 6 years**, always making decisions tailored to the user's needs.
+
+I’m a bit nerd, so when I’m not designing or coding, I may be watching the last chapter of Game of Thrones, or reading a Batman comic.
