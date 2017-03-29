@@ -8,4 +8,4 @@ image-cover: images/portfolio/universitame/uni-cover.jpg
 <span class="skill">ui & ux design</span>
 <span class="skill">front-end development</span>
 </div>
-Universítame was an online community where relationships are created among **pre-university students and students** who are immersed in college. They could share accurate information, generating a personalized counseling.
+Universítame was an online community where relationships were created among **pre-university students and students** who are immersed in college. They could share accurate information, generating a personalized counseling.
