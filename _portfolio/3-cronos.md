@@ -7,4 +7,4 @@ image-cover: images/portfolio/cronos/cro-cover.jpg
   <span class="skill">brand identity</span>
   <span class="skill">ui & ux design</span>
 </div>
-Cronos is an app that improves the **time management** in the process of the apple selection.
+Cronos is an app that improves **time management** in the process of the apple selection.
