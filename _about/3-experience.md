@@ -21,4 +21,4 @@ I’m currently a Freelance Designer at Toptal, and I’m always open for new an
     <li>Consumer Affairs</li>
   </ul>
 </div>
-You can see more details on my <a href="https://drive.google.com/open?id=0B6-SxHdAstlbTjhnUnNocVU3WFk" target="_blank">CV</a> or in my <a href="https://www.linkedin.com/in/iamcamilo" target="_blank">Linkedin profile</a>.
+You can see more details on my <a href="https://drive.google.com/open?id=0B6-SxHdAstlbTjhnUnNocVU3WFk" target="_blank">Resume</a> or in my <a href="https://www.linkedin.com/in/iamcamilo" target="_blank">Linkedin profile</a>.
