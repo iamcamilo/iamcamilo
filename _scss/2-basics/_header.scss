@@ -75,6 +75,7 @@
 }
 
 .btn-menu {
+  display: none;
   position: relative;
   top: 8px;
   height: 28px;
@@ -117,6 +118,39 @@
   }
 }
 
+.btn-nav {
+  @include chivo;
+  @include transition;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin-left: 20px;
+  line-height: 45px;
+  position: relative;
+  &.active,
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &:after {
+    @include transition;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+  }
+}
+
+.header.header-home .btn-nav {
+  display: none;
+}
+
 .btn-logo {
   .logo-text {
     transition: all 0.4s cubic-bezier(0.72, 0.13, 0.58, 1);
@@ -129,18 +163,72 @@
   }
 }
 
+// Header Fixed
+
+.header.header-fixed {
+  position: fixed;
+  background: white;
+  padding: 4px 30px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.43);
+  .logo path,
+  .logo-text path {
+    fill: $base-black;
+  }
+  .btn-logo {
+    top: 4px;
+    position: relative;
+  }
+  .btn-nav {
+    color: $base-black;
+    &.active,
+    &:hover {
+      &:after {
+        background-color: $base-black;
+        opacity: 1;
+      }
+    }
+  }
+  .logo-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .btn-menu:before,
+  .btn-menu:after,
+  .btn-menu span  {
+    background: $base-black;
+  }
+  .btn-menu {
+    span {
+      background: $base-black;
+    }
+  }
+  .btn-language {
+    color: $base-black;
+    span polygon {
+      fill: $base-black;
+    }
+  }
+}
 
 // Responsive
 
-.header {
+.header,
+.header.header-fixed {
   @include breakpoint(tablet) {
     padding: 14px;
     .logo-text {
       opacity: 1;
       transform: translateX(0);
     }
+    .btn-menu {
+      display: inline-block;
+    }
+    .btn-nav {
+      display: none;
+    }
   };
   @include breakpoint(mobile) {
+    padding: 4px 14px;
     a.btn-logo {
       top: 6px;
       position: relative;
@@ -163,40 +251,6 @@
     .btn-language,
     .btn-menu {
       transform-origin: top right;
-    }
-  }
-}
-
-
-// Header Fixed
-
-.header.header-fixed {
-  position: fixed;
-  background: white;
-  padding: 4px 14px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.43);
-  .logo path,
-  .logo-text path {
-    fill: $base-black;
-  }
-  .btn-logo {
-    top: 4px;
-    position: relative;
-  }
-  .btn-menu:before,
-  .btn-menu:after,
-  .btn-menu span  {
-    background: $base-black;
-  }
-  .btn-menu {
-    span {
-      background: $base-black;
-    }
-  }
-  .btn-language {
-    color: $base-black;
-    span polygon {
-      fill: $base-black;
     }
   }
 }

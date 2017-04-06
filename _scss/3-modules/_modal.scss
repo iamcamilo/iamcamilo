@@ -108,6 +108,9 @@ body.is-open {
     }
   };
   @include breakpoint(mobile) {
+    .modal-header {
+      padding: 4px 14px;
+    }
     .modal-menu {
       justify-content: flex-end;
       ul a {
