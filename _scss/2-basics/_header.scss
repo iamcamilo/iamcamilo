@@ -228,7 +228,6 @@
     }
   };
   @include breakpoint(mobile) {
-    padding: 4px 14px;
     a.btn-logo {
       top: 6px;
       position: relative;
