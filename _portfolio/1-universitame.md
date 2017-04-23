@@ -4,8 +4,8 @@ link: universitame.html
 image-cover: images/portfolio/universitame/uni-cover.jpg
 ---
 <div class="skills">
-<span class="skill">brand identity</span>
 <span class="skill">ui & ux design</span>
+<span class="skill">brand identity</span>
 <span class="skill">front-end development</span>
 </div>
 

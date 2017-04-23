@@ -14,8 +14,8 @@ title: Cronos
           <section class="title">
             <h4>Cronos</h4>
             <div class="skills">
-              <span class="skill">brand identity</span>
               <span class="skill">ui & ux design</span>
+              <span class="skill">brand identity</span>
             </div>
           </section>
 
@@ -70,7 +70,7 @@ title: Cronos
     <h5>You may also like</h5>
 
     <div class="row card-container card-animation small">
-      {% for portfolio_item in site.portfolio limit:2 %}
+      {% for portfolio_item in site.portfolio limit:2 offset:3 reversed %}
         <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
           <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
           <div class="card-content">

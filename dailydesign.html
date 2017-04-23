@@ -1,0 +1,71 @@
+---
+layout: default
+title: 100 days of UI Design
+---
+
+<div class="work">
+  <div class="container">
+
+    <div class="card-container portfolio-piece">
+      <div class="card">
+        <div class="card-cover" style="background: url(images/dailyuidesign/cover.jpg) no-repeat center; background-size: cover;"></div>
+        <div class="card-content">
+
+          <section class="title">
+            <h4>100 days of UI Design</h4>
+            <div class="skills">
+              <span class="skill">ui & ux design</span>
+              <span class="skill">personal project</span>
+              <span class="skill">challenge</span>
+            </div>
+          </section>
+
+          <section class="description">
+            <p>On April 4, 2017. I started my first challenge: <strong>100 days of UI Design</strong>.
+            <br><br>Some rules for me during this challenge 👇</p>
+            <div class="list">
+              <ul>
+                <li>Spend 45 mins - 1 hour max every day (for 100 days).</li>
+                <li>Do it, do it, do it!</li>
+                <li>Come on, just do it!</li>
+                <li>Have fun 😀</li>
+              </ul>
+            </div>
+            <p>Oh! You can <strong>follow me and my challenge</strong> on my <a href="https://www.instagram.com/iamcamilo.me" target="_blank">Instagram account</a>.</p>
+          </section>
+
+          <section class="gallery">
+            {% for design in site.dailyuidesign reversed %}
+            <a href="{{ design.link }}" target="_blank" class="img-link">
+              <div class="day-description">
+                <span class="day">#{{ design.day }}</span>
+                <p class="title">{{ design.title }}</p>
+              </div>
+              <img src="{{ design.image }}" alt="Day #{{ design.day }} - {{ design.title }}">
+            </a>
+            {% endfor %}
+          </section>
+
+          <section class="card-footer">
+            <img src="images/iamcamilo-iso.svg" alt="iamcamilo">
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <h5>You may also like</h5>
+
+    <div class="row card-container card-animation small">
+      {% for portfolio_item in site.portfolio limit:2 offset:2 %}
+        <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
+          <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
+          <div class="card-content">
+            <h4>{{ portfolio_item.title }}</h4>
+            {{ portfolio_item.content }}
+            <a href="{{ portfolio_item.link }}" class="btn">View Case Study</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
