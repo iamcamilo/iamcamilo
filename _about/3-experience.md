@@ -2,7 +2,7 @@
 title: Experience
 image-cover: images/about/experience.svg
 ---
-I’m currently a Freelance Designer at Toptal, and I’m always open for new and exciting projects, so do not hesitate to <a href="mailto:hello@iamcamilo.me">drop me a line</a> if you want to work on something new.
+I’m currently a UI & UX Designer at <a href="https://www.mozio.com" target="_blank">Mozio</a>, creating the future of ground transportation.
 <div class="list">
   <ul class="col-1">
     <li class="subtitle">Some of my clients</li>
