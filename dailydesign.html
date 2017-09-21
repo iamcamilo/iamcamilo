@@ -56,7 +56,7 @@ title: 100 days of UI Design
     <h5>You may also like</h5>
 
     <div class="row card-container card-animation small">
-      {% for portfolio_item in site.portfolio limit:2 offset:2 %}
+      {% for portfolio_item in site.portfolio limit:2 offset:3 %}
         <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
           <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
           <div class="card-content">

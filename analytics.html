@@ -1,0 +1,80 @@
+---
+layout: default
+title: CIS2 Analytics
+---
+
+<div class="work">
+  <div class="container">
+
+    <div class="card-container portfolio-piece">
+      <div class="card">
+        <div class="card-cover" style="background: url(images/portfolio/analytics/cis-cover.png) no-repeat center; background-size: cover;"></div>
+        <div class="card-content">
+
+          <section class="title">
+            <h4>CIS2 Analytics</h4>
+            <div class="skills">
+              <span class="skill">ui & ux design</span>
+              <span class="skill">data visualization</span>
+            </div>
+          </section>
+
+          <section class="description">
+            <p>CIS2 Analytics is a web app for <strong>statistics and data comparison</strong> of Chile and the world.</p>
+            <p>For this project I designed the complete <strong>UI & UX</strong> of the app.</p>
+            <p>It was a work between the Universidad de Concepción, Tesseract and iamcamilo, with funds from Corfo.</p>
+            <p>You can see it live here: <a href="http://analytics.cis2.io/" target="_blank">CIS2 Analytics</a></p>
+          </section>
+
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/analytics/cis-00.png" alt=""></div>
+          </section>
+
+          <section class="double row quote">
+            <div class="double-text">
+              <p>Information by Country</p>
+            </div>
+          </section>
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/analytics/cis-01.jpg" alt=""></div>
+          </section>
+          <section class="double row quote">
+            <div class="double-text">
+              <p>Global Ranking</p>
+            </div>
+          </section>
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/analytics/cis-02.jpg" alt=""></div>
+          </section>
+          <section class="double row quote">
+            <div class="double-text">
+              <p>Data Comparison</p>
+            </div>
+          </section>
+          <section class="double gallery row">
+            <div class="double-img col-1"><img src="images/portfolio/analytics/cis-03.jpg" alt=""></div>
+          </section>
+
+          <section class="card-footer">
+            <img src="images/portfolio/analytics/cis-footer.png" alt="CIS2 Logo">
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <h5>You may also like</h5>
+
+    <div class="row card-container card-animation small">
+      {% for portfolio_item in site.portfolio limit:2 offset:1 %}
+        <div class="card col-1" onclick="window.location='{{ portfolio_item.link }}';">
+          <div class="card-image" style="background: url({{ portfolio_item.image-cover }}) no-repeat center; background-size: cover;"></div>
+          <div class="card-content">
+            <h4>{{ portfolio_item.title }}</h4>
+            {{ portfolio_item.content }}
+            <a href="{{ portfolio_item.link }}" class="btn">View Case Study</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
