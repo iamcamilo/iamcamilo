@@ -2,10 +2,11 @@
 title: Experience
 image-cover: images/about/experience.svg
 ---
-I’m currently a UI & UX Designer at <a href="https://www.mozio.com" target="_blank">Mozio</a>, creating the future of ground transportation.
+I’m currently a UI & UX Designer at <a href="https://www.moduscreate.com" target="_blank">Modus Create</a>, creating challenging experiences with World-Class clients.
 <div class="list">
   <ul class="col-1">
     <li class="subtitle">Some of my clients</li>
+    <li>Mozio</li>
     <li>CMPC</li>
     <li>PF</li>
     <li>Servimark</li>
