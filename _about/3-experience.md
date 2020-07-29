@@ -2,19 +2,20 @@
 title: Experience
 image-cover: images/about/experience.svg
 ---
-I’m currently a UI & UX Designer at <a href="https://www.moduscreate.com" target="_blank">Modus Create</a>, creating challenging experiences with World-Class clients.
+I’m currently working as a UI & UX Designer at <a href="https://www.moduscreate.com" target="_blank">Modus Create</a>, creating challenging experiences with World-Class clients.
 <div class="list">
   <ul class="col-1">
     <li class="subtitle">Some of my clients</li>
+    <li>Kaplan</li>
     <li>Mozio</li>
     <li>CMPC</li>
     <li>PF</li>
     <li>Servimark</li>
     <li>Universidad de Talca</li>
-    <li>SIBIB UCM</li>
   </ul>
   <ul class="col-1">
     <li class="subtitle"></li>
+    <li>SIBIB UCM</li>
     <li>Itechra</li>
     <li>Cronos</li>
     <li>Clásica Bicicletas</li>
